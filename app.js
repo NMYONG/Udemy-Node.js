@@ -4,8 +4,14 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
+// Express 앱을 생성하여 app 상수에 저장하면 전체 구성 값을 설정할 수 있다.
+app.set("view engine", "pug");
+// Express에게 view를 찾을 지점을 알려줌
+app.set("views", "views");
+
 const amdinData = require("./routes/admin");
 const shopRoutes = require("./routes/shop");
+const { engine } = require("express-handlebars");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
