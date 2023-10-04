@@ -13,7 +13,12 @@ exports.getAddProduct = (req, res, next) => {
 
 // "Add Product" 폼에서 제품 정보를 받아와 데이터베이스에 저장하는 라우트 핸들러
 exports.postAddProduct = (req, res, next) => {
-  const product = new Product(req.body.title); // 요청 본문에서 제품 제목을 가져와 Product 모델을 사용해 인스턴스를 생성합니다.
+  const title = req.body.title;
+  const imageUrl = req.body.imageUrl;
+  const price = req.body.price;
+  const description = req.body.description;
+  const product = new Product(title, imageUrl, description, price); // 요청 본문에서 제품 제목, ...을 가져와 Product 모델을 사용해 인스턴스를 생성합니다.
+
   product.save(); // Product 모델의 save 메서드를 사용하여 제품 정보를 저장합니다.
   res.redirect("/"); // 홈 페이지로 리다이렉트합니다.
 };

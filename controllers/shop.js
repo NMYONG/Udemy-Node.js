@@ -20,12 +20,20 @@ exports.getIndex = (req, res, next) => {
       path: "/",
     });
   });
+  s;
 };
 
 exports.getCart = (req, res, next) => {
   res.render("shop/cart", {
     path: "/cart",
     pageTitle: "Your Cart",
+  });
+};
+
+exports.getOrder = (req, res, next) => {
+  res.render("shop/orders", {
+    path: "/orders",
+    pageTitle: "Your Oerders",
   });
 };
 

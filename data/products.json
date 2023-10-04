@@ -1,1 +1,8 @@
-[{ "title": "ㅁㄴㅇㄹ" }, { "title": "ㅁㅁㅁㅁ" }, { "title": "123" }]
+[
+  {
+    "title": "Book1",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqza33RNZnQHiTGFhDrB9Ximei8akFgoj1Hg&usqp=CAU",
+    "description": "This is an awesome Book!",
+    "price": "19.99"
+  }
+]

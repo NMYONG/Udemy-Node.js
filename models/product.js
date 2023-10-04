@@ -1,4 +1,4 @@
-const fs = require("fs");
+const fs = require("fs"); // file system
 const path = require("path");
 
 // 파일 경로를 생성합니다.
@@ -23,9 +23,12 @@ const getProductsFromFile = (cb) => {
 };
 
 module.exports = class Product {
-  constructor(t) {
-    // 생성자: 제품의 제목을 받아 인스턴스 변수에 할당합니다.
-    this.title = t;
+  constructor(title, imageUrl, description, price) {
+    // 생성자: 제품의 제목, 이미지URL, 설명, 가격을 입력 받아 인스턴스 변수에 할당합니다.
+    this.title = title;
+    this.imageUrl = imageUrl;
+    this.description = description;
+    this.price = price;
   }
 
   save() {
