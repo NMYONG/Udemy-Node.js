@@ -32,6 +32,8 @@ module.exports = class Product {
   }
 
   save() {
+    // 고유 ID를 생성합니다.
+    this.id = Math.random().toString();
     // 현재 제품을 파일에 저장합니다.
     getProductsFromFile((products) => {
       products.push(this); // 현재 제품을 제품 목록에 추가합니다.
