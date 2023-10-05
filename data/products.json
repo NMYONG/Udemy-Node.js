@@ -5,5 +5,12 @@
     "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqza33RNZnQHiTGFhDrB9Ximei8akFgoj1Hg&usqp=CAU",
     "description": "This is an awesome Book!",
     "price": "19.99"
+  },
+  {
+    "title": "Another Product",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqza33RNZnQHiTGFhDrB9Ximei8akFgoj1Hg&usqp=CAU",
+    "description": "Another very amazing product.",
+    "price": "20.00",
+    "id": "0.9263141572046021"
   }
 ]
