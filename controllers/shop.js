@@ -20,7 +20,6 @@ exports.getIndex = (req, res, next) => {
       path: "/",
     });
   });
-  s;
 };
 
 exports.getCart = (req, res, next) => {
