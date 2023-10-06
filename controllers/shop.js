@@ -15,9 +15,12 @@ exports.getProducts = (req, res, next) => {
 exports.getProduct = (req, res, next) => {
   const prodId = req.params.productId;
   Product.findById(prodId, (product) => {
-    console.log(product);
+    res.render("shop/product-detail", {
+      product: product,
+      pageTitle: product.title,
+      path: "/products",
+    });
   });
-  res.redirect("/");
 };
 
 exports.getIndex = (req, res, next) => {
@@ -37,10 +40,16 @@ exports.getCart = (req, res, next) => {
   });
 };
 
-exports.getOrder = (req, res, next) => {
+exports.postCart = (req, res, next) => {
+  const prodId = req.body.productId; // productId를 가져와서 cart에 추가하기
+  console.log(prodId);
+  res.redirect("/cart");
+};
+
+exports.getOrders = (req, res, next) => {
   res.render("shop/orders", {
     path: "/orders",
-    pageTitle: "Your Oerders",
+    pageTitle: "Your Orders",
   });
 };
 

@@ -11,7 +11,6 @@ const p = path.join(
 // 파일에서 제품 목록을 읽어오는 함수
 const getProductsFromFile = (cb) => {
   fs.readFile(p, (err, fileContent) => {
-    // 변수로 저장한 p파일을
     if (err) {
       cb([]); // 오류 발생 시 빈 배열을 전달합니다.
     } else {
@@ -52,7 +51,7 @@ module.exports = class Product {
     getProductsFromFile((products) => {
       // 현재 보고있는 product가 인수로 받은 id와 같다면 상수에 저장
       const product = products.find((p) => p.id === id);
-      cb(products);
+      cb(product);
     });
   }
 };
