@@ -42,7 +42,7 @@ exports.getCart = (req, res, next) => {
 
 exports.postCart = (req, res, next) => {
   const prodId = req.body.productId; // productId를 가져와서 cart에 추가하기
-  console.log(prodId);
+
   res.redirect("/cart");
 };
 
